@@ -12,12 +12,13 @@ public class Program {
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("Whats is the dollar price?");
-		CurrencyConverter.price = sc.nextDouble();;
+		double dollarPrice = sc.nextDouble();;
 		
 		System.out.println("How many dollars wil be  bought?");
-		double dollar = sc.nextDouble();
+		double amount = sc.nextDouble();
 		
-		System.out.printf("Amount to be paid in reais = %.2f", CurrencyConverter.converter(dollar));
+		double result = CurrencyConverter.dollarToReal(amount, dollarPrice);
+		System.out.printf("Amount to be paid in reais = %.2f", result);
 
 	}
 

@@ -1,11 +1,10 @@
 package util;
 
 public class CurrencyConverter {
-	public static double price;
+	public static double IOF = 0.06;
 	
 	
-	public static double converter(double dollar ) {
-		double imposto = dollar * 0.06 * price;
-		return  dollar * price + imposto;
+	public static double dollarToReal(double amount, double dollarPrice ) {
+		return  amount * dollarPrice *(1.0+IOF);
 	}
 }
